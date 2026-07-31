@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 大邱秋季五天四夜奢華自由行計畫 | Daegu Travel Planner</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #131b2e;
+      --bg-card: #1c273e;
+      --bg-card-hover: #24324f;
+      --accent-blue: #3b82f6;
+      --accent-cyan: #06b6d4;
+      --accent-purple: #8b5cf6;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-emerald: #10b981;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --glass-bg: rgba(19, 27, 46, 0.75);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-glow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 40px 0 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .badge.badge-purple { color: #c084fc; border-color: rgba(192, 132, 252, 0.3); }
+    .badge.badge-amber { color: #fbbf24; border-color: rgba(251, 191, 36, 0.3); }
+    .badge.badge-rose { color: #fb7185; border-color: rgba(251, 113, 133, 0.3); }
+    .badge.badge-emerald { color: #34d399; border-color: rgba(52, 211, 153, 0.3); }
+
+    h1.hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    p.hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    /* Summary Bar */
+    .summary-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .summary-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-blue);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .summary-info h4 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .summary-info p {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .summary-info span {
+      font-size: 0.82rem;
+      color: var(--accent-cyan);
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(16px);
+      padding: 10px 16px;
+      border-radius: 40px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    /* Tab Contents */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title i {
+      color: var(--accent-cyan);
+    }
+
+    /* Transport Card Matrix */
+    .transport-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .transport-section-header {
+      background: linear-gradient(90deg, rgba(59, 130, 246, 0.15), transparent);
+      border-left: 4px solid var(--accent-blue);
+      padding: 14px 20px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .transport-section-header h3 {
+      font-size: 1.3rem;
+      color: var(--text-main);
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+
+    .slot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slot-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    .slot-card.recommended {
+      border: 2px solid var(--accent-amber);
+      background: linear-gradient(145deg, #1c273e, #222e48);
+    }
+
+    .recommended-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(135deg, var(--accent-amber), #d97706);
+      color: #000;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-bottom-left-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .slot-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .slot-time {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+    }
+
+    .slot-tag {
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+    }
+
+    .slot-route {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .slot-route i {
+      color: var(--accent-blue);
+    }
+
+    .slot-details {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .slot-details li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slot-details i {
+      font-size: 0.8rem;
+      color: var(--accent-purple);
+    }
+
+    .slot-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent-emerald);
+    }
+
+    /* Day Itinerary Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin-top: 24px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 3px;
+      background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+      border-radius: 3px;
+    }
+
+    .day-block {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .day-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .day-number {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    }
+
+    .day-date {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .day-theme {
+      font-size: 0.9rem;
+      color: var(--accent-cyan);
+      font-weight: 500;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -42px;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
+    }
+
+    .timeline-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .timeline-time {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timeline-item-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .timeline-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .tag-container {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mini-tag {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-dim);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .mini-tag.blue-ribbon {
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      border-color: rgba(59, 130, 246, 0.3);
+      font-weight: 600;
+    }
+
+    .mini-tag.event {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fda4af;
+      border-color: rgba(244, 63, 94, 0.3);
+      font-weight: 600;
+    }
+
+    /* Blue Ribbon Showcase Grid */
+    .ribbon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .ribbon-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ribbon-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.4);
+      border-color: var(--accent-blue);
+    }
+
+    .ribbon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .ribbon-badge-tag {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 10px rgba(29, 78, 216, 0.4);
+    }
+
+    .ribbon-name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .ribbon-sub {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .ribbon-specialty {
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .ribbon-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .map-btn {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+    }
+
+    .map-btn:hover {
+      color: var(--accent-cyan);
+      text-decoration: underline;
+    }
+
+    /* Filter Controls */
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent-blue);
+      color: #fff;
+      border-color: var(--accent-blue);
+    }
+
+    /* Event Cards */
+    .event-card {
+      background: linear-gradient(135deg, rgba(28, 39, 62, 0.9), rgba(19, 27, 46, 0.9));
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .event-date-badge {
+      background: rgba(244, 63, 94, 0.2);
+      color: #fb7185;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 10px;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .event-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .event-location {
+      font-size: 0.88rem;
+      color: var(--accent-cyan);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Attractions Grid */
+    .attraction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .attraction-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .attraction-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-purple);
+    }
+
+    .attraction-icon {
+      font-size: 1.6rem;
+      color: var(--accent-purple);
+      margin-bottom: 10px;
+    }
+
+    .attraction-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .attraction-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1.hero-title { font-size: 2rem; }
+      .summary-card { grid-template-columns: 1fr; }
+      .nav-tabs { flex-direction: row; font-size: 0.85rem; }
+      .tab-btn { padding: 8px 14px; font-size: 0.85rem; }
+      .ribbon-grid, .slot-grid, .attraction-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="badge-bar">
+        <span class="badge badge-purple"><i class="fa-solid fa-calendar"></i> 2026/09/02 - 09/06 (5天4夜)</span>
+        <span class="badge badge-amber"><i class="fa-solid fa-plane"></i> 釜山航空 BX794 / BX791</span>
+        <span class="badge badge-emerald"><i class="fa-solid fa-hotel"></i> Eldis Regent Hotel 伊爾迪斯麗晶飯店</span>
+        <span class="badge badge-rose"><i class="fa-solid fa-gift"></i> 09/04 公司特別放假日</span>
+      </div>
+      <h1 class="hero-title">2026 大邱秋季奢華自由行計畫</h1>
+      <p class="hero-subtitle">精心規劃金海機場往返交通、韓國藍絲帶指南頂級美食、特色精品咖啡、秋季特展與大邱經典指標景點。</p>
+    </header>
+
+    <!-- Flight & Hotel Summary Card -->
+    <div class="summary-card">
+      <div class="summary-item">
+        <div class="summary-icon"><i class="fa-solid fa-plane-arrival"></i></div>
+        <div class="summary-info">
+          <h4>去程航班 (09/02 週三)</h4>
+          <p>BX794 桃園 T2 (13:30) ➔ 金海 PUS (17:05)</p>
+          <span>經濟艙 | A321 | 抵達後搭乘機場市外巴士直達東大邱</span>
+        </div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon"><i class="fa-solid fa-plane-departure"></i></div>
+        <div class="summary-info">
+          <h4>回程航班 (09/06 週日)</h4>
+          <p>BX791 金海 PUS (14:15) ➔ 桃園 T2 (15:45)</p>
+          <span>經濟艙 | A321 | 建議 11:45 前抵達金海機場報到</span>
+        </div>
+      </div>
+
+      <div class="summary-item">
+        <div class="summary-icon"><i class="fa-solid fa-hotel"></i></div>
+        <div class="summary-info">
+          <h4>下榻飯店 (4晚連住)</h4>
+          <p>Eldis Regent Hotel (伊爾迪斯麗晶飯店)</p>
+          <span>大邱中區達句伐大道2033 (青羅丘站9號出口旁 / 近半月堂)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('itinerary')"><i class="fa-solid fa-route"></i> 每日詳細行程</button>
+      <button class="tab-btn" onclick="switchTab('transport')"><i class="fa-solid fa-bus"></i> 機場交通方案 (5時段)</button>
+      <button class="tab-btn" onclick="switchTab('blueribbon')"><i class="fa-solid fa-ribbon"></i> 藍絲帶美食與咖啡</button>
+      <button class="tab-btn" onclick="switchTab('events')"><i class="fa-solid fa-calendar-star"></i> 當季特展與活動</button>
+      <button class="tab-btn" onclick="switchTab('attractions')"><i class="fa-solid fa-landmark"></i> 代表性景點</button>
+    </nav>
+
+    <!-- TAB 1: 每日詳細行程 -->
+    <div id="itinerary" class="tab-content active">
+      <div class="timeline">
+        
+        <!-- DAY 1 -->
+        <div class="day-block">
+          <div class="day-header">
+            <div class="day-title">
+              <div class="day-number">D1</div>
+              <div>
+                <div class="day-date">2026 年 9 月 2 日 (週三)</div>
+                <div class="day-theme">抵達韓國 ➔ 前往大邱 ➔ 飯店 Check-in ➔ 藍絲帶經典豬肉湯飯</div>
+              </div>
+            </div>
+            <span class="badge badge-purple">交通與入住日</span>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 17:05 - 17:50</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-plane-arrival" style="color:#3b82f6;"></i> 抵達釜山金海國際機場 (PUS)</div>
+              <div class="timeline-desc">入境審查、提取行李、購買金海機場直達東大邱的市外巴士車票（1樓4-5號月台）。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 18:10 - 19:30 [推薦方案A]</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-bus" style="color:#06b6d4;"></i> 金海機場 ➔ 東大邱綜合換乘中心 (市外巴士)</div>
+              <div class="timeline-desc">搭乘直達高級巴士（車程約 70~80 分鐘，票價 11,100 韓元）。車上可舒適休息並欣賞沿途秋季風景。</div>
+              <div class="tag-container">
+                <span class="mini-tag">直達無須轉乘</span>
+                <span class="mini-tag">對號座</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 19:40 - 20:00</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-subway" style="color:#8b5cf6;"></i> 東大邱 ➔ 伊爾迪斯麗晶飯店 (Eldis Regent Hotel)</div>
+              <div class="timeline-desc">從東大邱站搭乘地鐵1號線至半月堂站，或搭乘計程車（約 15 分鐘，車資約 8,000 韓元）直達飯店。完成辦理入住。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 20:20 - 21:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-utensils" style="color:#f59e0b;"></i> 晚餐：【8號食堂 8번식당】藍絲帶認證老店</div>
+              <div class="timeline-desc">位於飯店步行範圍內。大邱傳奇級豬肉湯飯與無腥味厚切白切肉（수육），湯頭濃醇甘甜，熱騰騰撫慰旅途勞頓。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶指南推薦</span>
+                <span class="mini-tag">豬肉湯飯</span>
+                <span class="mini-tag">厚切白切肉</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div class="day-block">
+          <div class="day-header">
+            <div class="day-title">
+              <div class="day-number">D2</div>
+              <div>
+                <div class="day-date">2026 年 9 月 3 日 (週四)</div>
+                <div class="day-theme">近代文化巷弄巡禮 ➔ 東仁洞辣燉排骨 ➔ 藍絲帶草莓名店 ➔ 前山夜景</div>
+              </div>
+            </div>
+            <span class="badge badge-amber">歷史文化與夜景</span>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 09:30 - 12:00</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-church" style="color:#8b5cf6;"></i> 近代文化巷弄胡同巡禮 (2號路線)</div>
+              <div class="timeline-desc">自飯店徒步出發：青羅丘（傳教士故居建築群） ➔ 3.1萬歲運動階段 ➔ 桂山聖堂 (哥德式紅磚建築) ➔ 大邱藥令市韓醫藥博物館 (足浴體驗)。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 12:30 - 14:00</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-bowl-food" style="color:#f43f5e;"></i> 午餐：【樂榮燉排骨 / 벙글벙글燉排骨】大邱十味名店</div>
+              <div class="timeline-desc">前往東仁洞燉排骨街。大邱特色傳統銅鍋大蒜香辣燉排骨（찜갈비），肉質軟嫩入味，醬汁拌飯堪稱一絕！</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶指南推薦</span>
+                <span class="mini-tag">大邱十味</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 14:30 - 16:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-mug-hot" style="color:#10b981;"></i> Afternoon Tea：【咖啡名家 Coffee Myungga 桂山店】</div>
+              <div class="timeline-desc">大邱傳奇精品咖啡品牌創始店，藍絲帶認證。享用手工手沖咖啡與招牌層次蛋糕，感受大邱濃郁的咖啡文化。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶咖啡</span>
+                <span class="mini-tag">精品手沖</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 17:00 - 19:00</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-bag-shopping" style="color:#06b6d4;"></i> 東城路商圈逛街 & SPARK LAND 巨型紅色摩天輪</div>
+              <div class="timeline-desc">大邱最繁華的購物街區，體驗空中頂樓摩天輪，遠眺大邱市區景致。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 19:30 - 21:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-mountain" style="color:#3b82f6;"></i> 前山展望台 (Apsan Observatory) 纜車夜景</div>
+              <div class="timeline-desc">搭乘前山纜車登頂，在全新升級的黃金兔與圓月打卡點俯瞰百萬級大邱城市夜景。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div class="day-block">
+          <div class="day-header">
+            <div class="day-title">
+              <div class="day-number">D3</div>
+              <div>
+                <div class="day-date">2026 年 9 月 4 日 (週五) ⭐公司特別放假日</div>
+                <div class="day-theme">大邱美術館當季秋季特展 ➔ 壽城池畔漫步 ➔ 雙藍絲帶法式義式饗宴 ➔ 金光石路</div>
+              </div>
+            </div>
+            <span class="badge badge-rose">放假日藝術人文特輯</span>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 10:00 - 12:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-palette" style="color:#f43f5e;"></i> 【特別展覽】大邱美術館 (Daegu Art Museum)</div>
+              <div class="timeline-desc">參觀 2026 秋季年度大展：《SHIM YUN : Gray Theater》與 5th Daegu Forum《Whispers Toward the Outside》。感受韓國頂尖當代藝術與建築光影。</div>
+              <div class="tag-container">
+                <span class="mini-tag event"><i class="fa-solid fa-star"></i> 2026 秋季限定特展</span>
+                <span class="mini-tag">當代藝術</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 13:00 - 14:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-utensils" style="color:#8b5cf6;"></i> 午餐：【12 Kitchen】雙藍絲帶頂級 Fine Dining</div>
+              <div class="timeline-desc">大邱極少數榮獲「雙藍絲帶 ⭐⭐」評鑑的精緻料理，運用在地旬味食材打造精緻義法饗宴。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 雙藍絲帶 ⭐⭐ 認證</span>
+                <span class="mini-tag">Fine Dining</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 15:00 - 17:00</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-water" style="color:#06b6d4;"></i> 壽城池 (Suseong Lake) 漫步 & 藍絲帶精品咖啡</div>
+              <div class="timeline-desc">在大邱最美湖畔漫步，造訪藍絲帶認證名店【커피맛을조금아는남자 (咖啡味稍微懂點的男人)】享用特調冰滴咖啡與精緻甜點。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶精品咖啡</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 17:30 - 19:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-music" style="color:#3b82f6;"></i> 金光石路 (김광석다시그리기길) 復古音樂壁畫街</div>
+              <div class="timeline-desc">沿著 350 公尺長的壁畫街散步，聆聽戶外吉他民謠演唱，感受濃厚的文青懷舊氣息與秋季民謠節氛圍。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 20:00 - 21:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-drumstick-bite" style="color:#f59e0b;"></i> 晚餐：【王蜘蛛食堂 wanggeomi】藍絲帶生牛肉 Mungtigi</div>
+              <div class="timeline-desc">大邱傳奇老店！藍絲帶推薦，品嚐每日現宰新鮮生牛肉切片（뭉티기）與香烤牛筋，口感極致鮮嫩彈牙。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶名店</span>
+                <span class="mini-tag">大邱十味生牛肉</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 4 -->
+        <div class="day-block">
+          <div class="day-header">
+            <div class="day-title">
+              <div class="day-number">D4</div>
+              <div>
+                <div class="day-date">2026 年 9 月 5 日 (週六)</div>
+                <div class="day-theme">E-World & 83塔星光節 ➔ 慶尚監營朝鮮風俗表演 ➔ 安吉郎烤腸 ➔ 西門夜市</div>
+              </div>
+            </div>
+            <span class="badge badge-emerald">樂園與傳統風俗</span>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 09:30 - 13:00</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-tower-observation" style="color:#8b5cf6;"></i> E-World 主題樂園 & 83塔 景觀台</div>
+              <div class="timeline-desc">欣賞歐式花園秋季花卉展，登上 83 塔 77 樓展望台全景俯瞰大邱全市景緻。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 13:30 - 14:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-bowl-rice" style="color:#3b82f6;"></i> 午餐：【釜山安面屋】藍絲帶歷史平壤冷麵</div>
+              <div class="timeline-desc">大邱傳承多年的藍絲帶老店，清爽高雅的平壤冷麵與香脆綠豆餅，夏秋之交的絕佳滋味。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶老店</span>
+                <span class="mini-tag">平壤冷麵</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 15:00 - 16:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-mask" style="color:#f43f5e;"></i> 【週六特別活動】慶尚監營公園 朝鮮傳統風俗表演</div>
+              <div class="timeline-desc">觀賞每週六下午進行的朝鮮時代衛兵交接儀式、更點時報與傳統兵器表演，免費體驗文化交流。</div>
+              <div class="tag-container">
+                <span class="mini-tag event"><i class="fa-solid fa-flag"></i> 每週六限定文化表演</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 17:30 - 19:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-fire" style="color:#f59e0b;"></i> 晚餐：安吉郎烤腸一條街 (Anjirang Gopchang)</div>
+              <div class="timeline-desc">大邱代表性美食！整條街滿滿烤豬腸與烤牛腸香氣，搭配特調大醬沾醬與冷啤酒，道地韓式熱鬧氛圍。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 20:00 - 21:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-store" style="color:#06b6d4;"></i> 西門夜市 (Seomun Night Market) 巡禮</div>
+              <div class="timeline-desc">大邱最大的夜市！品嚐【미성당 藍絲帶扁餃子 (납작만두)】、烤豬肉串、五花肉飯捲與各式創意甜點。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶元祖扁餃子</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 5 -->
+        <div class="day-block">
+          <div class="day-header">
+            <div class="day-title">
+              <div class="day-number">D5</div>
+              <div>
+                <div class="day-date">2026 年 9 月 6 日 (週日)</div>
+                <div class="day-theme">退房 ➔ 三頌麻藥麵包伴手禮 ➔ 返程釜山金海機場 ➔ 賦歸台北</div>
+              </div>
+            </div>
+            <span class="badge badge-purple">平安賦歸</span>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 08:30 - 09:15</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-bread-slice" style="color:#f59e0b;"></i> 早餐與伴手禮：【三頌麵包 Samsong Bakery 總店】</div>
+              <div class="timeline-desc">購買藍絲帶認證的國民美食「麻藥玉米麵包 (마약옥수수빵)」，外酥內軟爆漿濃郁，為旅行畫下完美句點。</div>
+              <div class="tag-container">
+                <span class="mini-tag blue-ribbon"><i class="fa-solid fa-ribbon"></i> 藍絲帶必買伴手禮</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 09:30</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-suitcase" style="color:#3b82f6;"></i> 辦理退房 ➔ 前往東大邱綜合換乘中心</div>
+              <div class="timeline-desc">從 Eldis Regent Hotel 辦理退房，搭乘地鐵1號線或計程車至東大邱站（約 15 分鐘）。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 10:00 - 11:20 [推薦回程方案B]</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-bus" style="color:#06b6d4;"></i> 東大邱 ➔ 釜山金海國際機場 (市外巴士)</div>
+              <div class="timeline-desc">搭乘 10:00 發車之市外巴士，約 11:20 順利抵達金海機場，時間充裕，免去拖托行李繁瑣。</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-time"><i class="fa-regular fa-clock"></i> 11:45 - 14:15</div>
+              <div class="timeline-item-title"><i class="fa-solid fa-plane-departure" style="color:#f43f5e;"></i> 機場報到與返台 (BX791 14:15 起飛)</div>
+              <div class="timeline-desc">辦理登機手續、行李託運、免稅店購物，於 15:45 順利抵達台灣桃園國際機場 T2。</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 2: 交通方案 5時段選擇 -->
+    <div id="transport" class="tab-content">
+      <h2 class="section-title"><i class="fa-solid fa-bus-simple"></i> 金海機場 ⇄ 大邱飯店 雙向交通規劃 (精選 5 大時段方案)</h2>
+      
+      <!-- 去程 -->
+      <div class="transport-container" style="margin-bottom:40px;">
+        <div class="transport-section-header">
+          <h3><i class="fa-solid fa-plane-arrival"></i> 【去程】2026/09/02 (三) 金海機場 (PUS) ➔ 大邱飯店 (Eldis Regent)</h3>
+          <span style="font-size:0.85rem; color:var(--text-muted);">班機 17:05 降落，預估通關提行李約 35-45 分鐘</span>
+        </div>
+
+        <div class="slot-grid">
+          <!-- Option 1 -->
+          <div class="slot-card recommended">
+            <div class="recommended-badge">首選推薦 ⭐</div>
+            <div class="slot-header">
+              <span class="slot-time">18:10 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              金海機場 ➔ 東大邱 (19:30) ➔ 飯店 (19:55)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 出關時間充裕，無須過度匆忙。</li>
+              <li><i class="fa-solid fa-check"></i> 巴士大行李艙輕鬆放置行李。</li>
+              <li><i class="fa-solid fa-check"></i> 抵達東大邱後轉乘地鐵/計程車15分鐘到飯店。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 70~80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">18:50 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              金海機場 ➔ 東大邱 (20:10) ➔ 飯店 (20:35)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 若遇入境排隊較久或需購買SIM卡時的最佳選擇。</li>
+              <li><i class="fa-solid fa-check"></i> 時間十分寬鬆，可以在機場稍微用餐或休息。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 70~80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">19:30 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              金海機場 ➔ 東大邱 (20:50) ➔ 飯店 (21:15)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 彈性備案。若班機延誤或等待託運行李較耗時適用。</li>
+              <li><i class="fa-solid fa-check"></i> 抵達飯店仍可在夜市或老店享用宵夜晚餐。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 70~80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 4 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">17:50 發車</span>
+              <span class="slot-tag">輕軌 + KTX 鐵路</span>
+            </div>
+            <div class="slot-route">
+              金海輕軌至沙上 ➔ KTX龜浦至東大邱 (19:15)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 體驗韓國 KTX 高速鐵路。</li>
+              <li><i class="fa-solid fa-exclamation-triangle" style="color:#f59e0b;"></i> 需轉乘 2 次，適合攜帶輕量行李者。</li>
+            </ul>
+            <div class="slot-price">
+              <span>總車程約 80 分鐘</span>
+              <span>約 18,500 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 5 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">20:10 發車</span>
+              <span class="slot-tag">深夜市外巴士</span>
+            </div>
+            <div class="slot-route">
+              金海機場 ➔ 東大邱 (21:30) ➔ 飯店 (21:55)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 晚間充裕備案，適合班機顯著延誤時選搭。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 70~80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 回程 -->
+      <div class="transport-container">
+        <div class="transport-section-header">
+          <h3><i class="fa-solid fa-plane-departure"></i> 【回程】2026/09/06 (日) 大邱飯店 (Eldis Regent) ➔ 金海機場 (PUS)</h3>
+          <span style="font-size:0.85rem; color:var(--text-muted);">班機 14:15 起飛，目標 11:45-12:15 抵達機場報到</span>
+        </div>
+
+        <div class="slot-grid">
+          <!-- Option 1 -->
+          <div class="slot-card recommended">
+            <div class="recommended-badge">首選推薦 ⭐</div>
+            <div class="slot-header">
+              <span class="slot-time">09:30 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              東大邱 ➔ 金海機場 (10:50 抵達)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 最佳黃金時間！提前約 3.2 小時抵達機場。</li>
+              <li><i class="fa-solid fa-check"></i> 時間極度寬裕，可輕鬆辦理退稅、託運與免稅店購物。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">10:00 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              東大邱 ➔ 金海機場 (11:20 抵達)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 完美的 2.5 小時前抵達時間。</li>
+              <li><i class="fa-solid fa-check"></i> 早上可悠閒在飯店或附近享用三頌麻藥麵包早餐。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">09:00 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              東大邱 ➔ 金海機場 (10:20 抵達)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 超早到極速方案，適合習慣提早報到的旅客。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 4 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">10:30 發車</span>
+              <span class="slot-tag">直達市外巴士</span>
+            </div>
+            <div class="slot-route">
+              東大邱 ➔ 金海機場 (11:50 抵達)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 剛好提前 2.25 小時抵達，緊湊型行程首選。</li>
+            </ul>
+            <div class="slot-price">
+              <span>車程約 80 分鐘</span>
+              <span>11,100 韓元</span>
+            </div>
+          </div>
+
+          <!-- Option 5 -->
+          <div class="slot-card">
+            <div class="slot-header">
+              <span class="slot-time">09:15 發車</span>
+              <span class="slot-tag">KTX 鐵路 + 機場快線</span>
+            </div>
+            <div class="slot-route">
+              KTX東大邱至釜山站 ➔ 地鐵/計程車至金海機場 (10:50)
+            </div>
+            <ul class="slot-details">
+              <li><i class="fa-solid fa-check"></i> 可避免國道高速公路假日塞車風險。</li>
+            </ul>
+            <div class="slot-price">
+              <span>總車程約 95 分鐘</span>
+              <span>約 20,000 韓元</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: 藍絲帶美食與咖啡甜點 -->
+    <div id="blueribbon" class="tab-content">
+      <h2 class="section-title"><i class="fa-solid fa-award"></i> 大邱韓國藍絲帶指南 (Blue Ribbon Survey) 評鑑美饌與咖啡甜點</h2>
+      
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterRibbon('all')">全部名單</button>
+        <button class="filter-btn" onclick="filterRibbon('food')">經典美饌</button>
+        <button class="filter-btn" onclick="filterRibbon('cafe')">精品咖啡</button>
+        <button class="filter-btn" onclick="filterRibbon('dessert')">名品甜點/麵包</button>
+      </div>
+
+      <div class="ribbon-grid">
+        
+        <!-- Item 1 -->
+        <div class="ribbon-card" data-cat="food">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶認證</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區 (近飯店)</span>
+            </div>
+            <h3 class="ribbon-name">8號食堂 (8번식당)</h3>
+            <div class="ribbon-sub">傳奇돼지국밥 & 수육 豬肉湯飯與白切肉</div>
+            <div class="ribbon-specialty">招牌：厚切蒸白切肉、純米豬肉湯飯、血腸</div>
+            <div class="ribbon-desc">經營超過 40 年的大邱老字號！以完全無腥味、軟嫩多汁的特選豬肉切片與濃郁大骨高湯享譽韓國。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區西城路13</span>
+            <a href="https://map.naver.com/v5/search/8%EB%B2%88%EC%8B%9D%EB%8B%B9" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="ribbon-card" data-cat="food">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 雙藍絲帶 ⭐⭐</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">壽城區</span>
+            </div>
+            <h3 class="ribbon-name">12 Kitchen (12 키친)</h3>
+            <div class="ribbon-sub">大邱頂級 Fine Dining 現代義式法式料理</div>
+            <div class="ribbon-specialty">招牌：旬味主廚主理套餐、熟成牛排、精緻海鮮</div>
+            <div class="ribbon-desc">大邱極少數榮獲雙藍絲帶評鑑的頂級奢華餐廳，選用韓國當地季節食材演繹高雅優雅的歐式精緻饗宴。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市壽城區無學路11</span>
+            <a href="https://map.naver.com/v5/search/12키친" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="ribbon-card" data-cat="food">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶認證</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區東仁洞</span>
+            </div>
+            <h3 class="ribbon-name">樂榮燉排骨 (낙영찜갈비) / 벙글벙글</h3>
+            <div class="ribbon-sub">大邱十味元祖 동인동 찜갈비</div>
+            <div class="ribbon-specialty">招牌：傳統銅鍋香辣燉牛排骨、特調醬汁炒飯</div>
+            <div class="ribbon-desc">大邱必吃代表性美食！在古樸銅鍋中加入大量蒜末與特製香辣醬汁燉煮，排骨骨肉分離、香濃無比。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區東仁洞1街</span>
+            <a href="https://map.naver.com/v5/search/%EB%82%99%EC%96%81%EC%BF%B0%EA%B0%88%EB%B9%84" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="ribbon-card" data-cat="food">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶認證</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區</span>
+            </div>
+            <h3 class="ribbon-name">王蜘蛛食堂 (왕거미식당)</h3>
+            <div class="ribbon-sub">大邱名物 生牛肉片 (뭉티기) & 烤牛筋</div>
+            <div class="ribbon-specialty">招牌：當日現宰鮮切生牛肉 (뭉티기)、炭烤牛筋</div>
+            <div class="ribbon-desc">Naver評分極高的傳奇名店！盤子倒扣都不會掉落的極致鮮嫩生牛肉，搭配麻油特調沾醬，震撼饕客味蕾。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區東德路38길 315</span>
+            <a href="https://map.naver.com/v5/search/%EC%99%95%EA%B1%B0%EB%AF%B8%EC%8B%9D%EB%8B%B9" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="ribbon-card" data-cat="food">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶認證</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區</span>
+            </div>
+            <h3 class="ribbon-name">美星堂扁餃子 (미성당 납작만두)</h3>
+            <div class="ribbon-sub">大邱十味元祖 납작만두</div>
+            <div class="ribbon-specialty">招牌：煎薄皮扁餃子、切絲蔥花醬油、辣炒年糕</div>
+            <div class="ribbon-desc">創立於 1963 年的大邱老字號！將極薄的麵皮包入少量冬粉後煎至金黃香酥，淋上特製蔥花醬油極致美味。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區明德路93</span>
+            <a href="https://map.naver.com/v5/search/%EB%AF%B8%EC%84%B1%EB%8B%B9%EB%82%A9%EC%9E%91%EB%A7%8C%EB%90%90" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="ribbon-card" data-cat="cafe">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶精品咖啡</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">壽城區 / 壽城池</span>
+            </div>
+            <h3 class="ribbon-name">커피맛을조금아는남자 (咖啡味稍微懂點的男人)</h3>
+            <div class="ribbon-sub">大邱指標性精品烘焙手沖咖啡館</div>
+            <div class="ribbon-specialty">招牌：莊園單品手沖咖啡、Romano檸檬咖啡</div>
+            <div class="ribbon-desc">大邱在地咖啡迷的朝聖殿堂！由冠軍烘豆師親自選豆，氣氛高雅優美，感受大邱獨特的咖啡哲學。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市壽城區範魚洞</span>
+            <a href="https://map.naver.com/v5/search/%EC%BB%A4%ED%94%BC%EB%A7%9B%EC%9D%84%EC%A1%B0%EA%B8%88%EC%95%84%EB%8A%94%EB%82%A8%EC%9E%90" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="ribbon-card" data-cat="cafe">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶創始店</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區 (桂山聖堂旁)</span>
+            </div>
+            <h3 class="ribbon-name">咖啡名家 (커피명가 Coffee Myungga)</h3>
+            <div class="ribbon-sub">1990 年創立的大邱經典精品咖啡</div>
+            <div class="ribbon-specialty">招牌：名家手工手沖、招牌手工鮮奶油蛋糕</div>
+            <div class="ribbon-desc">創立超過 30 年的大邱傳奇咖啡品牌，這家門市正對桂山聖堂，邊品嚐咖啡邊欣賞古典教堂建築美景。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區西城路20</span>
+            <a href="https://map.naver.com/v5/search/%EC%BB%A4%ED%94%BC%EB%AA%85%EA%B0%80" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="ribbon-card" data-cat="dessert">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶國民烘焙</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區東城路</span>
+            </div>
+            <h3 class="ribbon-name">三頌麵包 (삼송빵집 Samsong Bakery)</h3>
+            <div class="ribbon-sub">傳奇「麻藥玉米麵包」發源總店</div>
+            <div class="ribbon-specialty">招牌：마약옥수수빵 (麻藥玉米麵包)、菠蘿紅豆餅</div>
+            <div class="ribbon-desc">全韓國瘋搶的麻藥玉米麵包發源總店！外層香甜菠蘿皮，內餡裹滿爆漿特調奶油玉米，讓人一口接一口。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區中央大路395</span>
+            <a href="https://map.naver.com/v5/search/%EC%82%BC%EC%86%A1%EB%B9%B5%EC%A7%91" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="ribbon-card" data-cat="food">
+          <div>
+            <div class="ribbon-header">
+              <div class="ribbon-badge-tag"><i class="fa-solid fa-ribbon"></i> 藍絲帶百年經典</div>
+              <span style="font-size:0.8rem; color:var(--text-dim);">中區東城路</span>
+            </div>
+            <h3 class="ribbon-name">釜山安面屋 (부산안면옥)</h3>
+            <div class="ribbon-sub">韓戰時期傳承至今的平壤冷麵老店</div>
+            <div class="ribbon-specialty">招牌：傳統水冷麵、拌冷麵、現煎香酥綠豆餅</div>
+            <div class="ribbon-desc">每年僅限春季至秋季營業的傳奇老店，採用純蕎麥麵條與清澈鮮甜牛骨冷湯，藍絲帶多年權威評鑑肯定。</div>
+          </div>
+          <div class="card-footer">
+            <span><i class="fa-solid fa-location-dot"></i> 大邱廣域市中區國彩報償路125길 6</span>
+            <a href="https://map.naver.com/v5/search/%EB%B6%80%EC%82%B0%EC%95%88%EB%A9%B4%EC%98%A5" target="_blank" class="map-btn">Naver Map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 4: 當季特展與活動 -->
+    <div id="events" class="tab-content">
+      <h2 class="section-title"><i class="fa-solid fa-calendar-check"></i> 2026 年 9 月大邱當季特別活動與藝術展覽 ( TravelPlanner 精選 )</h2>
+      
+      <div class="event-card">
+        <span class="event-date-badge"><i class="fa-solid fa-calendar-day"></i> 2026/07/14 – 2026/10/11 (整個行程期間皆可參觀)</span>
+        <h3 class="event-title">🎨 大邱美術館 (Daegu Art Museum) 年度當季特展：《SHIM YUN : Gray Theater》</h3>
+        <div class="event-location"><i class="fa-solid fa-location-dot"></i> 大邱廣域市壽城區三德洞 (地鐵2號線大公園站轉乘循環公車)</div>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:12px;">大邱美術館 2026 DArtist 特別企劃展，呈現韓國當代藝術家 Shim Yun 獨特的灰調視覺劇場空間，探索當代社會文明與個人心靈的深刻對話。</p>
+        <div class="tag-container">
+          <span class="mini-tag event">美術展覽</span>
+          <span class="mini-tag">當代藝術</span>
+          <span class="mini-tag">室內展館</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <span class="event-date-badge"><i class="fa-solid fa-calendar-day"></i> 2026/07/07 – 2026/10/25 (9/4公司放假日推薦)</span>
+        <h3 class="event-title">🏛️ 大邱論壇 5th Daegu Forum：《Whispers Toward the Outside》</h3>
+        <div class="event-location"><i class="fa-solid fa-location-dot"></i> 大邱美術館第1展廳</div>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:12px;">大邱美術館指標性國際當代藝術論壇展，集合韓國國內外頂尖當代藝術家，運用多元媒體、裝置藝術與聲光體驗，打造充滿靈感的視覺盛宴。</p>
+        <div class="tag-container">
+          <span class="mini-tag event">國際論壇展</span>
+          <span class="mini-tag">裝置藝術</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <span class="event-date-badge"><i class="fa-solid fa-calendar-day"></i> 2026/09/04 – 2026/09/05 (行程第3、4天)</span>
+        <h3 class="event-title">🎪 2026 韓國多元文化和諧博覽會 (Korea Multicultural Harmony Expo)</h3>
+        <div class="event-location"><i class="fa-solid fa-location-dot"></i> 大邱 EXCO 會展中心 (Daegu EXCO)</div>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:12px;">於大邱 EXCO 盛大舉行的文化交流博覽會，現場集結多元美食體驗攤位、傳統工藝展覽與各國音樂表演。</p>
+        <div class="tag-container">
+          <span class="mini-tag event">EXCO大型會展</span>
+          <span class="mini-tag">文化體驗</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <span class="event-date-badge"><i class="fa-solid fa-calendar-day"></i> 2026/09/05 (週六 14:00 - 16:00 限定)</span>
+        <h3 class="event-title">💂 慶尚監營公園 朝鮮傳統風俗交接儀式與更點時報</h3>
+        <div class="event-location"><i class="fa-solid fa-location-dot"></i> 大邱中區 慶尚監營公園 (Gyeongsang Gamyeong Park)</div>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:12px;">重現朝鮮時代大邱監營守衛的的風俗演練！含傳統韓服衛兵門哨更換儀式、傳統軍樂吹打表演與兵器展示，可免費著韓服拍照。</p>
+        <div class="tag-container">
+          <span class="mini-tag event">免費傳統表演</span>
+          <span class="mini-tag">每週六限定</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <span class="event-date-badge"><i class="fa-solid fa-calendar-day"></i> 2026 9月初秋季限定</span>
+        <h3 class="event-title">✨ E-World 83塔 秋季星光花卉慶典 (Autumn Starlight Festival)</h3>
+        <div class="event-location"><i class="fa-solid fa-location-dot"></i> E-World 樂園與 83 Tower 園區</div>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:12px;">大邱初秋最浪漫的燈光花卉盛會！夜間數百萬盞彩色燈光造景與浪漫波斯菊花海，搭配 83 塔燈光秀，拍照打卡絕佳場合。</p>
+        <div class="tag-container">
+          <span class="mini-tag event">夜間燈光秀</span>
+          <span class="mini-tag">秋季花卉</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: 代表性景點 -->
+    <div id="attractions" class="tab-content">
+      <h2 class="section-title"><i class="fa-solid fa-map-location-dot"></i> 大邱廣域市最具代表性指標景點導覽</h2>
+      
+      <div class="attraction-grid">
+        <div class="attraction-card">
+          <div class="attraction-icon"><i class="fa-solid fa-church"></i></div>
+          <h3 class="attraction-name">近代文化巷弄 (Modern Culture Alley)</h3>
+          <p class="attraction-desc">大邱最著名的歷史散步路線！含青羅丘傳教士故居、3.1運動階梯與哥德式建築桂山聖堂，隨處皆是絕美攝影點。</p>
+          <div class="tag-container">
+            <span class="mini-tag">歷史建築</span>
+            <span class="mini-tag">飯店步行可達</span>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+          <h3 class="attraction-name">前山展望台 (Apsan Observatory)</h3>
+          <p class="attraction-desc">搭乘前山纜車輕鬆登頂，設有現代感巨型黃金兔與圓月景觀台，可俯瞰 360 度無死角的大邱璀璨百萬夜景。</p>
+          <div class="tag-container">
+            <span class="mini-tag">百萬夜景</span>
+            <span class="mini-tag">觀光纜車</span>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-icon"><i class="fa-solid fa-store"></i></div>
+          <h3 class="attraction-name">西門市場 & 西門夜市 (Seomun Market)</h3>
+          <p class="attraction-desc">朝鮮時代三大市場之一！白天體驗韓服與雜貨購物，夜晚化身為全大邱最熱鬧的美食夜市攤位區。</p>
+          <div class="tag-container">
+            <span class="mini-tag">傳統市場</span>
+            <span class="mini-tag">夜市美食</span>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-icon"><i class="fa-solid fa-water"></i></div>
+          <h3 class="attraction-name">壽城池 (Suseong Lake)</h3>
+          <p class="attraction-desc">大邱市民最喜愛的湖畔休閒勝地，擁有環湖步道、鴨子船與音樂噴泉秀，周邊聚集眾多藍絲帶景觀咖啡廳。</p>
+          <div class="tag-container">
+            <span class="mini-tag">湖光山色</span>
+            <span class="mini-tag">景觀咖啡廳</span>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-icon"><i class="fa-solid fa-music"></i></div>
+          <h3 class="attraction-name">金光石重逢之路 (김광석길)</h3>
+          <p class="attraction-desc">紀念韓國傳奇民謠歌手金光石的壁畫藝術街，350 公尺長的巷弄佈滿精美壁畫、懷舊咖啡館與現場吉街頭表演。</p>
+          <div class="tag-container">
+            <span class="mini-tag">藝術壁畫</span>
+            <span class="mini-tag">文青音樂</span>
+          </div>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-icon"><i class="fa-solid fa-tower-observation"></i></div>
+          <h3 class="attraction-name">E-World 主題樂園 & 83塔</h3>
+          <p class="attraction-desc">結合主題遊樂設施與大邱地標 83 塔，塔內設有空中展望台、旋轉餐廳與歐式星光花園，約會與拍照首選。</p>
+          <div class="tag-container">
+            <span class="mini-tag">城市地標</span>
+            <span class="mini-tag">主題樂園</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Daegu Travel Planner | Travel Plan Generated for Eldis Regent Hotel Stay (2026/09/02 - 09/06)</p>
+      <p style="margin-top:4px;">交通數據參考金海機場巴士官方時刻表 | 美食資訊取材自韓國 Blue Ribbon Survey (블루리본 서베이) 權威評鑑</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Tab switching function
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    // Filter Blue Ribbon Cards
+    function filterRibbon(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      const cards = document.querySelectorAll('.ribbon-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
