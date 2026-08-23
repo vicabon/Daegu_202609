@@ -686,6 +686,152 @@
       gap: 6px;
     }
 
+    
+    /* Attraction Filter Bar & Badges */
+    .attraction-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .attr-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .attr-filter-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-main);
+      border-color: var(--accent-cyan);
+    }
+
+    .attr-filter-btn.active {
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4);
+    }
+
+    .ai-methodology-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 28px;
+      backdrop-filter: blur(12px);
+    }
+
+    .ai-models-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+
+    .ai-badge.gemini { color: #93c5fd; border-color: rgba(147, 197, 253, 0.3); }
+    .ai-badge.gpt { color: #86efac; border-color: rgba(134, 239, 172, 0.3); }
+    .ai-badge.grok { color: #fca5a5; border-color: rgba(252, 165, 165, 0.3); }
+    .ai-badge.claude { color: #fdba74; border-color: rgba(253, 186, 116, 0.3); }
+    .ai-badge.qwen { color: #c4b5fd; border-color: rgba(196, 181, 253, 0.3); }
+    .ai-badge.deepseek { color: #67e8f9; border-color: rgba(103, 232, 249, 0.3); }
+    .ai-badge.kimi { color: #f472b6; border-color: rgba(244, 114, 182, 0.3); }
+
+    .attr-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .attr-score-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      flex-shrink: 0;
+    }
+
+    .attr-meta-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 10px 0 14px;
+      padding: 10px 12px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-blue);
+      font-size: 0.84rem;
+    }
+
+    .attr-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .attr-meta-item i {
+      width: 16px;
+      color: var(--accent-cyan);
+      text-align: center;
+    }
+
+    .cost-free {
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    .cost-low {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+
+    .cost-high {
+      color: #fb7185;
+      font-weight: 700;
+    }
+
+    .excluded-card {
+      opacity: 0.75;
+      border-color: rgba(244, 63, 94, 0.3);
+      background: rgba(244, 63, 94, 0.05);
+    }
+
+    .excluded-card:hover {
+      opacity: 1;
+      border-color: var(--accent-rose);
+    }
+
     /* Attractions Grid */
     .attraction-grid {
       display: grid;
@@ -795,7 +941,7 @@
       <button class="tab-btn" onclick="switchTab('transport')"><i class="fa-solid fa-bus"></i> 機場交通方案 (5時段)</button>
       <button class="tab-btn" onclick="switchTab('blueribbon')"><i class="fa-solid fa-ribbon"></i> 藍絲帶美食與咖啡</button>
       <button class="tab-btn" onclick="switchTab('events')"><i class="fa-solid fa-calendar-star"></i> 當季特展與活動</button>
-      <button class="tab-btn" onclick="switchTab('attractions')"><i class="fa-solid fa-landmark"></i> 代表性景點</button>
+      <button class="tab-btn" onclick="switchTab('attractions')"><i class="fa-solid fa-map-location-dot"></i> 7大AI精選必去景點</button>
     </nav>
 
     <!-- TAB 1: 每日詳細行程 -->
@@ -1580,68 +1726,423 @@
       </div>
     </div>
 
-    <!-- TAB 5: 代表性景點 -->
+        <!-- TAB 5: 7大AI精選必去景點 -->
     <div id="attractions" class="tab-content">
-      <h2 class="section-title"><i class="fa-solid fa-map-location-dot"></i> 大邱廣域市最具代表性指標景點導覽</h2>
-      
+      <div class="ai-methodology-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <h3 style="font-size:1.25rem; font-weight:700; color:#fff; display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-brain" style="color:var(--accent-purple);"></i> 7 大 AI 跨平台社群大數據綜合評鑑 × 住宿量身篩選
+          </h3>
+          <span class="badge badge-purple"><i class="fa-solid fa-hotel"></i> Eldis Regent Hotel 出發核心圈</span>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.92rem; margin-top:10px; line-height:1.6;">
+          本榜單整合 <strong>Gemini、ChatGPT、Grok、Claude、Qwen (千問)、DeepSeek、Kimi</strong> 等 7 大頂尖 AI 對韓文 (Naver/IG)、日文 (X/Twitter)、中文 (Threads/小紅書/Dcard) 海量社群討論度與推薦強度的深度挖掘。並針對入住 <strong>Eldis Regent Hotel（青羅丘站/半月堂站）</strong> 進行地理優化，<strong>嚴格排除單程交通 > 1.5 小時</strong>之遠郊及<strong>高額門票收費</strong>景點，精選 14 大「0元免門票 / 銅板超低收費」且「1~30分鐘內直達」的極致高CP值大邱必去名勝！
+        </p>
+        <div class="ai-models-bar">
+          <span class="ai-badge gemini"><i class="fa-brands fa-google"></i> Gemini</span>
+          <span class="ai-badge gpt"><i class="fa-solid fa-robot"></i> ChatGPT</span>
+          <span class="ai-badge grok"><i class="fa-solid fa-xmark"></i> Grok</span>
+          <span class="ai-badge claude"><i class="fa-solid fa-message"></i> Claude</span>
+          <span class="ai-badge qwen"><i class="fa-solid fa-feather"></i> Qwen</span>
+          <span class="ai-badge deepseek"><i class="fa-solid fa-whale"></i> DeepSeek</span>
+          <span class="ai-badge kimi"><i class="fa-solid fa-moon"></i> Kimi</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; font-size:0.85rem; color:var(--text-muted); border-top:1px solid rgba(255,255,255,0.08); padding-top:12px;">
+          <span><i class="fa-solid fa-circle-check" style="color:var(--accent-emerald);"></i> <strong>入選標準</strong>：7大AI共識度極高 + 門票免費/極低 + 交通 ≤ 70分鐘</span>
+          <span><i class="fa-solid fa-circle-xmark" style="color:var(--accent-rose);"></i> <strong>排除標準</strong>：E-World遊樂園全票(4.9萬₩)、水族館(3.3萬₩)、霞鶩亭(車程>1.5hr)</span>
+        </div>
+      </div>
+
+      <!-- Attraction Filter Bar -->
+      <div class="attraction-filter-bar">
+        <button class="attr-filter-btn active" onclick="filterAttractions('all')"><i class="fa-solid fa-list"></i> 全部景點 (19)</button>
+        <button class="attr-filter-btn" onclick="filterAttractions('walk')"><i class="fa-solid fa-person-walking"></i> 🚶 飯店步行圈 (≤10分)</button>
+        <button class="attr-filter-btn" onclick="filterAttractions('subway')"><i class="fa-solid fa-train-subway"></i> 🚇 捷運/公車速達 (10~25分)</button>
+        <button class="attr-filter-btn" onclick="filterAttractions('night')"><i class="fa-solid fa-moon"></i> 🌅 絕美夜景與浪漫</button>
+        <button class="attr-filter-btn" onclick="filterAttractions('nature')"><i class="fa-solid fa-tree"></i> 🌿 自然名勝與森林</button>
+        <button class="attr-filter-btn" onclick="filterAttractions('art')"><i class="fa-solid fa-palette"></i> 🎨 文青藝術與打卡</button>
+        <button class="attr-filter-btn" onclick="filterAttractions('excluded')"><i class="fa-solid fa-ban"></i> 🚫 排除景點原因 (5)</button>
+      </div>
+
       <div class="attraction-grid">
-        <div class="attraction-card">
-          <div class="attraction-icon"><i class="fa-solid fa-church"></i></div>
-          <h3 class="attraction-name">近代文化巷弄 (Modern Culture Alley)</h3>
-          <p class="attraction-desc">大邱最著名的歷史散步路線！含青羅丘傳教士故居、3.1運動階梯與哥德式建築桂山聖堂，隨處皆是絕美攝影點。</p>
+        <!-- 1. 近代文化胡同 & 青蘿之丘 -->
+        <div class="attraction-card" data-cat="walk art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-monument"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">近代文化胡同 & 青蘿之丘 (청라언덕)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">飯店正對面，步行 1~2 分鐘 (0.1km)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-map-pin"></i> 位置：大邱廣域市中區達句伐大路 2029</div>
+          </div>
+          <p class="attraction-desc">大邱最著名的歷史人文步道！包含傳教士故居建築群（斯威策/詹尼斯住宅）、90階「3.1運動萬歲路」與第一教會舊址。綠蔭林道與紅磚洋房交織，為韓劇熱門拍攝地，早晨或午後漫步極為悠閒愜意。</p>
           <div class="tag-container">
-            <span class="mini-tag">歷史建築</span>
-            <span class="mini-tag">飯店步行可達</span>
+            <span class="mini-tag">歷史洋房</span>
+            <span class="mini-tag">韓劇取景</span>
+            <span class="mini-tag">0元景點</span>
+            <span class="mini-tag">飯店正門口</span>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-          <h3 class="attraction-name">前山展望台 (Apsan Observatory)</h3>
-          <p class="attraction-desc">搭乘前山纜車輕鬆登頂，設有現代感巨型黃金兔與圓月景觀台，可俯瞰 360 度無死角的大邱璀璨百萬夜景。</p>
+        <!-- 2. 桂山聖堂 -->
+        <div class="attraction-card" data-cat="walk art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-church"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">桂山聖堂 (계산성당 / Gyesan Cathedral)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">從飯店步行約 3 分鐘 (0.2km)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-map-pin"></i> 位置：大邱廣域市中區西城路 10</div>
+          </div>
+          <p class="attraction-desc">嶺南地區最早建立的哥德式紅磚天主教聖堂，也是大邱最具代表性的近代地標之一。雙塔鐘樓莊嚴典雅，內部花窗玻璃特別繪有穿著傳統韓服的聖人像，結合西方建築與韓國在地文化。</p>
+          <div class="tag-container">
+            <span class="mini-tag">百年哥德建築</span>
+            <span class="mini-tag">韓服彩繪玻璃</span>
+            <span class="mini-tag">0元景點</span>
+          </div>
+        </div>
+
+        <!-- 3. 西門市場 & 西門夜市 -->
+        <div class="attraction-card" data-cat="walk night">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-utensils"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">西門市場 & 西門夜市 (서문시장 & 야시장)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元，小吃銅板價自由消費)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">從飯店步行 6~8 分鐘 (0.5km)</span> 或 地鐵3號線1站</div>
+            <div class="attr-meta-item"><i class="fa-solid fa-clock"></i> 時間：日市 09:00-18:00 / 夜市 19:00-23:30 (週五至日攤位最齊全)</div>
+          </div>
+          <p class="attraction-desc">朝鮮時代三大市集之一，大邱最熱鬧的市井靈魂！白天品嚐必吃名物「薄皮扁餃子(납작만두)」、刀削麵與辣炒年糕；夜晚化身全韓國規模最大的常設美食夜市，數十個特色攤位集結，現場氣氛熱鬧非凡。</p>
+          <div class="tag-container">
+            <span class="mini-tag">傳統市集</span>
+            <span class="mini-tag">夜市美食</span>
+            <span class="mini-tag">扁餃子名物</span>
+            <span class="mini-tag">0元入場</span>
+          </div>
+        </div>
+
+        <!-- 4. 壽城池 -->
+        <div class="attraction-card" data-cat="subway night nature">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-water"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">壽城池 (수성못 / Suseong Lake)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元，音樂噴泉免費觀賞)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵3號線青羅丘站直達壽城池站，車程僅 16 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-music"></i> 水舞：5~10月夜間定時音樂噴泉水舞秀 (20:00 / 21:00)</div>
+          </div>
+          <p class="attraction-desc">大邱市民與旅客最愛的浪漫湖畔名勝！初秋微風徐徐，2公里環湖木棧道景色宜人。每晚定時上演絢爛音樂噴泉秀，周邊聚集無數大邱頂級藍絲帶景觀咖啡廳、法式烘焙甜點與湖景餐酒館。</p>
+          <div class="tag-container">
+            <span class="mini-tag">湖畔夜景</span>
+            <span class="mini-tag">音樂噴泉</span>
+            <span class="mini-tag">藍絲帶咖啡街</span>
+            <span class="mini-tag">0元景點</span>
+          </div>
+        </div>
+
+        <!-- 5. 前山展望台 & 前山公園 -->
+        <div class="attraction-card" data-cat="subway night nature">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">前山展望台 & 纜車 (앞산 전망대)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">展望台完全免費</span> (前山纜車來回 14,000₩ 或步行步道0元)</div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵1號線轉410-1公車或南區1號公車，約 28 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-camera"></i> 亮點：黃金巨兔雕塑、夜光月亮步道、360度百萬夜景</div>
+          </div>
+          <p class="attraction-desc">大邱公認第一名的百萬夜景聖地！入選「韓國觀光百選」，搭乘纜車輕鬆登上山頂，設有超人氣巨型發光黃金兔與圓月裝置，能俯瞰整個大邱市區、83塔與洛東江璀璨燈火。傍晚日落前上山景色最為震撼。</p>
           <div class="tag-container">
             <span class="mini-tag">百萬夜景</span>
-            <span class="mini-tag">觀光纜車</span>
+            <span class="mini-tag">黃金兔打卡</span>
+            <span class="mini-tag">前山咖啡街</span>
+            <span class="mini-tag">觀光百選</span>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-icon"><i class="fa-solid fa-store"></i></div>
-          <h3 class="attraction-name">西門市場 & 西門夜市 (Seomun Market)</h3>
-          <p class="attraction-desc">朝鮮時代三大市場之一！白天體驗韓服與雜貨購物，夜晚化身為全大邱最熱鬧的美食夜市攤位區。</p>
+        <!-- 6. 金光石再次繪畫路 -->
+        <div class="attraction-card" data-cat="subway art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-guitar"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">金光石再次繪畫路 (김광석 다시그리기길)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵2號線青羅丘站直達慶大醫院站3號出口，約 12 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-music"></i> 氛圍：全天候播放金光石經典民謠，街頭藝人彈唱</div>
+          </div>
+          <p class="attraction-desc">為紀念韓國傳奇民謠詩人歌手金光石所打造的 350 公尺文青藝術壁畫街。巷弄間充滿精美彩繪牆面、吉他長椅雕塑與黑膠唱片裝置，周邊林立眾多特色文創小店、獨立咖啡館與韓劇取景點。</p>
           <div class="tag-container">
-            <span class="mini-tag">傳統市場</span>
-            <span class="mini-tag">夜市美食</span>
+            <span class="mini-tag">音樂壁畫</span>
+            <span class="mini-tag">文青散步</span>
+            <span class="mini-tag">特色咖啡館</span>
+            <span class="mini-tag">0元景點</span>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-icon"><i class="fa-solid fa-water"></i></div>
-          <h3 class="attraction-name">壽城池 (Suseong Lake)</h3>
-          <p class="attraction-desc">大邱市民最喜愛的湖畔休閒勝地，擁有環湖步道、鴨子船與音樂噴泉秀，周邊聚集眾多藍絲帶景觀咖啡廳。</p>
+        <!-- 7. 大邱藥令市韓醫藥博物館 -->
+        <div class="attraction-card" data-cat="walk art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-mortar-pestle"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐½</span>
+          </div>
+          <h3 class="attraction-name">大邱藥令市韓醫藥博物館 (약령시)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">入館參觀完全免費</span> (韓方草藥足浴體驗 5,000₩ 銅板價)</div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">從飯店步行約 5~7 分鐘 (0.4km)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-spa"></i> 體驗：韓方草藥足浴(附韓方茶)、韓醫體質測驗、韓服體驗</div>
+          </div>
+          <p class="attraction-desc">大邱藥令市自朝鮮孝宗時期起已有 360 多年歷史，是韓國最具規模的傳統韓藥集散地。博物館展示珍貴藥材歷史與互動模型，強烈推薦體驗 20 分鐘的舒壓韓方草藥足浴，逛街累了極致療癒放鬆！</p>
           <div class="tag-container">
-            <span class="mini-tag">湖光山色</span>
-            <span class="mini-tag">景觀咖啡廳</span>
+            <span class="mini-tag">韓方足浴體驗</span>
+            <span class="mini-tag">360年歷史</span>
+            <span class="mini-tag">免費參觀</span>
+            <span class="mini-tag">近飯店</span>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-icon"><i class="fa-solid fa-music"></i></div>
-          <h3 class="attraction-name">金光石重逢之路 (김광석길)</h3>
-          <p class="attraction-desc">紀念韓國傳奇民謠歌手金光石的壁畫藝術街，350 公尺長的巷弄佈滿精美壁畫、懷舊咖啡館與現場吉街頭表演。</p>
+        <!-- 8. 東城路商圈 & 現代百貨大邱店 -->
+        <div class="attraction-card" data-cat="walk art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐½</span>
+          </div>
+          <h3 class="attraction-name">東城路商圈 & 現代百貨 (더현대 대구)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">從飯店步行約 8~12 分鐘</span> 或 半月堂站地下街連通</div>
+            <div class="attr-meta-item"><i class="fa-solid fa-tv"></i> 特色：現代百貨 9F 空中雕塑花園（韓劇《淚之女王》取景地）</div>
+          </div>
+          <p class="attraction-desc">大邱最繁華的心臟商圈！美妝旗艦店、韓國潮牌、文創小店與咖啡街林立。鄰近的「The Hyundai Daegu (現代百貨)」由世界頂級設計師打造，9樓設有絕美開放式空中花園與藝術雕塑，免費開放參觀拍照。</p>
           <div class="tag-container">
-            <span class="mini-tag">藝術壁畫</span>
-            <span class="mini-tag">文青音樂</span>
+            <span class="mini-tag">流行商圈</span>
+            <span class="mini-tag">淚之女王取景</span>
+            <span class="mini-tag">空中花園</span>
+            <span class="mini-tag">0元景點</span>
           </div>
         </div>
 
-        <div class="attraction-card">
-          <div class="attraction-icon"><i class="fa-solid fa-tower-observation"></i></div>
-          <h3 class="attraction-name">E-World 主題樂園 & 83塔</h3>
-          <p class="attraction-desc">結合主題遊樂設施與大邱地標 83 塔，塔內設有空中展望台、旋轉餐廳與歐式星光花園，約會與拍照首選。</p>
+        <!-- 9. 大邱藝術發電所 & 壽昌青春曼遜 -->
+        <div class="attraction-card" data-cat="subway art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-moon"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">大邱藝術發電所 & 壽昌青春曼遜</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵3號線青羅丘站搭至達城公園站，共約 10 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-camera-retro"></i> 爆紅點：巨型發光大月球裝置藝術 (Moon Installation)</div>
+          </div>
+          <p class="attraction-desc">前身為舊 KT&G 菸草工廠，經活化改建為工業風當代藝術育成中心。館內頂樓懸掛的「巨型發光月亮」紅遍 IG、Threads 與小紅書，站在月亮前剪影拍照極度夢幻；隔壁為老員工宿舍改建的壽昌青春曼遜文創園區。</p>
           <div class="tag-container">
-            <span class="mini-tag">城市地標</span>
-            <span class="mini-tag">主題樂園</span>
+            <span class="mini-tag">發光大月球</span>
+            <span class="mini-tag">當代藝術</span>
+            <span class="mini-tag">工業風文創</span>
+            <span class="mini-tag">0元景點</span>
+          </div>
+        </div>
+
+        <!-- 10. 大邱樹木園 -->
+        <div class="attraction-card" data-cat="subway nature">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-seedling"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐½</span>
+          </div>
+          <h3 class="attraction-name">大邱樹木園 (대구수목원 / Arboretum)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵1號線半月堂站直達大谷站，車程加步行約 32 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-thumbs-up"></i> 評價：Google 評論 4.6 顆星高分生態勝地</div>
+          </div>
+          <p class="attraction-desc">全球著名的環保生態復育典範！原為都市垃圾掩埋場，經數十年復育蛻變為佔地達 7 萬坪的綠色森林。園區包含熱帶仙人掌溫室、藥草園、盆景園等 21 個主題園區，初秋漫步芬多精步道極其舒心療癒。</p>
+          <div class="tag-container">
+            <span class="mini-tag">生態復育奇蹟</span>
+            <span class="mini-tag">仙人掌溫室</span>
+            <span class="mini-tag">森林浴步道</span>
+            <span class="mini-tag">0元景點</span>
+          </div>
+        </div>
+
+        <!-- 11. 香村文化館 & 慶尚監營公園 -->
+        <div class="attraction-card" data-cat="walk art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-film"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">香村文化館 & 慶尚監營公園</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-low">文化館僅 1,000₩ (約NT$25)</span> / 監營公園免費</div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵1號線中央路站4號出口，從飯店步行約 15 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-shirt"></i> 體驗：免費換穿 1960 年代復古學生制服拍照</div>
+          </div>
+          <p class="attraction-desc">極具趣味的沉浸式懷舊文化館！一二樓栩栩如生復刻了 1950~60 年代大邱的繁華老街景、老式理髮廳、茶房與酒館，現場可免費換穿復古學生服拍出絕妙美照；隔壁即是朝鮮時代慶尚道最高行政機關「慶尚監營公園」。</p>
+          <div class="tag-container">
+            <span class="mini-tag">復古制服體驗</span>
+            <span class="mini-tag">懷舊老街</span>
+            <span class="mini-tag">銅板價1000₩</span>
+            <span class="mini-tag">市中心</span>
+          </div>
+        </div>
+
+        <!-- 12. 八公山道立公園 & 桐華寺 -->
+        <div class="attraction-card" data-cat="nature">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-mountain"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 共識 ⭐⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">八公山道立公園 & 桐華寺 (동화사)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">千年古剎桐華寺現已全面免費 (0元)</span> (八公山纜車來回13,000₩可選)</div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵1號線轉乘「急行1號公車 (급행1)」，約 65 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-tree"></i> 亮點：33米藥師如來統一大佛、千年古剎、山岳景致</div>
+          </div>
+          <p class="attraction-desc">大邱的精神象徵名山！初秋群山疊翠、山風清涼。始建於西元493年的千年名剎「桐華寺」現已免收門票，寺內供奉世界最大的 33 公尺藥師如來統一大佛，氣勢恢宏肅穆，是日韓旅客一致盛讚的心靈療癒勝地。</p>
+          <div class="tag-container">
+            <span class="mini-tag">千年古寺</span>
+            <span class="mini-tag">統一大佛</span>
+            <span class="mini-tag">免門票名山</span>
+            <span class="mini-tag">車程約65分</span>
+          </div>
+        </div>
+
+        <!-- 13. The ARC 江亭高靈洑 水上文化館 -->
+        <div class="attraction-card" data-cat="night art">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-shapes"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">The ARC 江亭高靈洑 水上文化館 (디아크)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">建築外觀、戶外園區與觀景台完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵2號線江倉站/大大小站轉成西2號公車，約 48 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-sun"></i> 景觀：洛東江落日夕陽、未來感飛碟光雕夜景</div>
+          </div>
+          <p class="attraction-desc">世界級建築大師 Hani Rashid 設計的未來銀色水滴形飛碟建築。座落於洛東江與琴湖江交會處，頂樓咖啡廳與戶外大草坪是欣賞大邱壯麗江畔日落與夜間彩色燈光秀的絕佳秘境，戶外還可租借微型電動車遊江。</p>
+          <div class="tag-container">
+            <span class="mini-tag">未來銀色飛碟</span>
+            <span class="mini-tag">江畔夕陽</span>
+            <span class="mini-tag">魔幻夜景</span>
+            <span class="mini-tag">0元景點</span>
+          </div>
+        </div>
+
+        <!-- 14. 峨洋鐵橋 -->
+        <div class="attraction-card" data-cat="subway night">
+          <div class="attr-header-row">
+            <div class="attraction-icon"><i class="fa-solid fa-bridge"></i></div>
+            <span class="attr-score-badge"><i class="fa-solid fa-star"></i> 7 AI 評鑑 ⭐⭐⭐⭐</span>
+          </div>
+          <h3 class="attraction-name">峨洋鐵橋 (아양기찻길 / Ayang Bridge)</h3>
+          <div class="attr-meta-info">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-free">完全免費 (0元)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-location-arrow"></i> 交通：<span style="color:var(--accent-cyan); font-weight:600;">地鐵1號線半月堂站直達峨洋橋站4號出口，約 22 分鐘</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-heart"></i> 取景：蘇志燮、申敏兒主演韓劇《Oh My Venus》名場面</div>
+          </div>
+          <p class="attraction-desc">將廢棄的大邱線鐵道橋樑賦予新生的典範！改建為橫跨琴湖江的空中透明玻璃步道與景觀咖啡廳。韓劇《Oh My Venus》中蘇志燮與申敏兒告白名場面即在此拍攝，夜晚橋樑倒映於江水中的燈光極為浪漫迷人。</p>
+          <div class="tag-container">
+            <span class="mini-tag">廢棄鐵道重生</span>
+            <span class="mini-tag">Oh My Venus取景</span>
+            <span class="mini-tag">江上玻璃步道</span>
+            <span class="mini-tag">0元景點</span>
+          </div>
+        </div>
+
+        <!-- 15. 排除：E-World 主題樂園 -->
+        <div class="attraction-card excluded-card" data-cat="excluded">
+          <div class="attr-header-row">
+            <div class="attraction-icon" style="color:var(--accent-rose);"><i class="fa-solid fa-ban"></i></div>
+            <span class="attr-score-badge" style="background:rgba(244,63,94,0.15); color:var(--accent-rose); border-color:rgba(244,63,94,0.3);"><i class="fa-solid fa-triangle-exclamation"></i> 排除：門票過貴</span>
+          </div>
+          <h3 class="attraction-name" style="color:var(--accent-rose);">E-World 主題樂園 (이월드)</h3>
+          <div class="attr-meta-info" style="border-left-color:var(--accent-rose);">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-high">全日票 49,000₩ / 夜間票 35,000₩ (門票昂貴)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-circle-info"></i> 篩選原因：門票收費高昂，且遊樂設施非成年自由行主要目的。</div>
+          </div>
+          <p class="attraction-desc"><strong>【替代方案】</strong> 若想欣賞大邱地標「83塔」，無需購買昂貴樂園門票進場！建議於<strong>前山展望台、頭流公園或市中心遠眺拍攝</strong>，即可免費享有包含 83 塔在內的無敵璀璨全景。</p>
+          <div class="tag-container">
+            <span class="mini-tag" style="border-color:rgba(244,63,94,0.3); color:var(--accent-rose);">收費高昂排除</span>
+            <span class="mini-tag">建議前山遠眺83塔</span>
+          </div>
+        </div>
+
+        <!-- 16. 排除：大邱愛來水族館 -->
+        <div class="attraction-card excluded-card" data-cat="excluded">
+          <div class="attr-header-row">
+            <div class="attraction-icon" style="color:var(--accent-rose);"><i class="fa-solid fa-ban"></i></div>
+            <span class="attr-score-badge" style="background:rgba(244,63,94,0.15); color:var(--accent-rose); border-color:rgba(244,63,94,0.3);"><i class="fa-solid fa-triangle-exclamation"></i> 排除：門票過貴</span>
+          </div>
+          <h3 class="attraction-name" style="color:var(--accent-rose);">大邱愛來水族館 (대구 아쿠아리움)</h3>
+          <div class="attr-meta-info" style="border-left-color:var(--accent-rose);">
+            <div class="attr-meta-item"><i class="fa-solid fa-ticket"></i> 門票：<span class="cost-high">成人門票 29,000 ~ 33,000₩ (約 NT$800)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-circle-info"></i> 篩選原因：位於新世界百貨內，場館偏小且票價昂貴，CP值偏低。</div>
+          </div>
+          <p class="attraction-desc"><strong>【替代方案】</strong> 新世界百貨本身與頂樓露天裝置藝術區為免費開放，若到訪東大邱站可免費逛街，水族館收費區不建議專程付費進入。</p>
+          <div class="tag-container">
+            <span class="mini-tag" style="border-color:rgba(244,63,94,0.3); color:var(--accent-rose);">收費高昂排除</span>
+            <span class="mini-tag">CP值低</span>
+          </div>
+        </div>
+
+        <!-- 17. 排除：達城霞鶩亭 -->
+        <div class="attraction-card excluded-card" data-cat="excluded">
+          <div class="attr-header-row">
+            <div class="attraction-icon" style="color:var(--accent-rose);"><i class="fa-solid fa-ban"></i></div>
+            <span class="attr-score-badge" style="background:rgba(244,63,94,0.15); color:var(--accent-rose); border-color:rgba(244,63,94,0.3);"><i class="fa-solid fa-route"></i> 排除：車程 > 1.5小時</span>
+          </div>
+          <h3 class="attraction-name" style="color:var(--accent-rose);">達城霞鶩亭 (달성 하목정)</h3>
+          <div class="attr-meta-info" style="border-left-color:var(--accent-rose);">
+            <div class="attr-meta-item"><i class="fa-solid fa-bus"></i> 交通時間：<span class="cost-high">單程大眾運輸 1.5 ~ 2 小時 (班次極稀少)</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-circle-info"></i> 篩選原因：位於遠郊達城郡河濱面，往返耗費近半天，交通極不便。</div>
+          </div>
+          <p class="attraction-desc"><strong>【替代方案】</strong> 市中心的<strong>青蘿之丘、近代文化胡同與慶尚監營公園</strong>同樣具備深厚歷史底蘊與古蹟氛圍，出門即達，省下大量交通折騰時間。</p>
+          <div class="tag-container">
+            <span class="mini-tag" style="border-color:rgba(244,63,94,0.3); color:var(--accent-rose);">車程超標排除</span>
+            <span class="mini-tag">偏遠郊區</span>
+          </div>
+        </div>
+
+        <!-- 18. 排除：琵瑟山大見寺 -->
+        <div class="attraction-card excluded-card" data-cat="excluded">
+          <div class="attr-header-row">
+            <div class="attraction-icon" style="color:var(--accent-rose);"><i class="fa-solid fa-ban"></i></div>
+            <span class="attr-score-badge" style="background:rgba(244,63,94,0.15); color:var(--accent-rose); border-color:rgba(244,63,94,0.3);"><i class="fa-solid fa-route"></i> 排除：車程 > 2小時</span>
+          </div>
+          <h3 class="attraction-name" style="color:var(--accent-rose);">琵瑟山大見寺 (비슬산 대견사)</h3>
+          <div class="attr-meta-info" style="border-left-color:var(--accent-rose);">
+            <div class="attr-meta-item"><i class="fa-solid fa-bus"></i> 交通時間：<span class="cost-high">單程大眾運輸超過 2 小時</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-circle-info"></i> 篩選原因：位於達城郡極南端，需多次轉乘巴士與觀光車，耗時過長。</div>
+          </div>
+          <p class="attraction-desc"><strong>【替代方案】</strong> 推薦改訪<strong>八公山桐華寺</strong>（車程約65分直達急行公車）或市區<strong>前山公園</strong>，自然景觀與古寺文化更為壯麗且交通更便利。</p>
+          <div class="tag-container">
+            <span class="mini-tag" style="border-color:rgba(244,63,94,0.3); color:var(--accent-rose);">車程超標排除</span>
+          </div>
+        </div>
+
+        <!-- 19. 排除：軍威郡花本站 -->
+        <div class="attraction-card excluded-card" data-cat="excluded">
+          <div class="attr-header-row">
+            <div class="attraction-icon" style="color:var(--accent-rose);"><i class="fa-solid fa-ban"></i></div>
+            <span class="attr-score-badge" style="background:rgba(244,63,94,0.15); color:var(--accent-rose); border-color:rgba(244,63,94,0.3);"><i class="fa-solid fa-route"></i> 排除：車程 > 2.5小時</span>
+          </div>
+          <h3 class="attraction-name" style="color:var(--accent-rose);">軍威郡花本站 (군위 화본역)</h3>
+          <div class="attr-meta-info" style="border-left-color:var(--accent-rose);">
+            <div class="attr-meta-item"><i class="fa-solid fa-bus"></i> 交通時間：<span class="cost-high">單程搭車超過 2.5 小時</span></div>
+            <div class="attr-meta-item"><i class="fa-solid fa-circle-info"></i> 篩選原因：為近年新合併至大邱的遠郊鄉村，單程耗時過長，不適合短天數市區自由行。</div>
+          </div>
+          <p class="attraction-desc"><strong>【替代方案】</strong> 喜愛復古老車站與鐵道風情的旅客，推薦前往市區內的<strong>峨洋鐵橋</strong>（地鐵直達22分），景觀更美且完全免費。</p>
+          <div class="tag-container">
+            <span class="mini-tag" style="border-color:rgba(244,63,94,0.3); color:var(--accent-rose);">車程超標排除</span>
           </div>
         </div>
       </div>
@@ -1676,6 +2177,35 @@
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
+        }
+      });
+    }
+
+    // Filter Attractions
+    function filterAttractions(category) {
+      document.querySelectorAll('.attr-filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      const cards = document.querySelectorAll('#attractions .attraction-card');
+      cards.forEach(card => {
+        const cats = card.getAttribute('data-cat') || '';
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else if (category === 'excluded') {
+          if (cats.includes('excluded')) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        } else {
+          // If not looking for excluded, hide excluded unless explicitly matched
+          if (cats.includes('excluded')) {
+            card.style.display = 'none';
+          } else if (cats.includes(category)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
         }
       });
     }
